@@ -1,0 +1,476 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.menu {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.menu .logo-link {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu .logo-site {
+    height: 60px;
+    width: auto;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.menu a:not(.logo-link) {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.menu a:hover:not(.logo-link) {
+    background-color: #34495e;
+    transform: translateY(-2px);
+}
+
+.conteudo {
+    width: 70%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 40px 0;
+}
+
+.carrossel-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carrossel-titulo {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.carrossel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 600px;
+}
+
+.carrossel-item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.carrossel-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carrossel-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-sizing: border-box;
+}
+
+.carrossel-navegacao {
+    margin-top: 15px;
+}
+
+.carrossel-navegacao button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.carrossel-navegacao button:hover {
+    background-color: #0056b3;
+}
+
+.chamadas-para-acao {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 45%;
+    box-sizing: border-box;
+}
+
+.card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: #007bff;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #218838;
+}
+
+.introducao {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.introducao p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+    color: #555;
+    text-align: justify;
+}
+
+.galeria-dubladores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 10px;
+}
+
+.dublador-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dublador-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dublador-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #3498db;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dublador-card h3 {
+    color: #3498db;
+    margin-bottom: 12px;
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+.dublador-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #666;
+    flex-grow: 1;
+}
+
+.dublador-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+.dublador-card ul li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #444;
+    padding-left: 15px;
+    position: relative;
+}
+
+.dublador-card ul li::before {
+    content: '★';
+    color: #f39c12;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.8em;
+}
+
+.dublador-card ul li strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.introducao-historia {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.introducao-historia p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1em;
+    color: #444;
+    text-align: justify;
+}
+
+.periodo-historico {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.periodo-historico h2 {
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.periodo-historico p {
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.7;
+    color: #333;
+}
+
+.rodape {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 60px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape p {
+    margin: 5px 0;
+    text-align: center;
+    color: #ecf0f1;
+}
+
+@media (max-width: 992px) {
+    .conteudo {
+        width: 85%;
+        padding: 25px;
+    }
+    .card {
+        max-width: 48%;
+        min-width: unset;
+    }
+    .dublador-card {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        padding: 15px 2%;
+    }
+    .menu .logo-link {
+        margin: 0 auto 15px auto;
+    }
+    .menu .logo-site {
+        height: 40px;
+        margin-left: 0;
+    }
+    .menu a {
+        margin: 5px 0;
+    }
+    .conteudo {
+        width: 90%;
+        margin: 15px auto;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    .carrossel {
+        height: 350px;
+    }
+    .carrossel-item img {
+        border-radius: 0;
+    }
+    .carrossel-item figcaption {
+        border-radius: 0;
+        padding: 8px;
+        font-size: 0.8em;
+    }
+    .chamadas-para-acao {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 90%;
+        width: 90%;
+    }
+    .dublador-card {
+        width: calc(100% - 20px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .galeria-dubladores {
+        gap: 20px;
+    }
+    .introducao p {
+        font-size: 1em;
+    }
+    .periodo-historico h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu .logo-site {
+        height: 35px;
+    }
+    .menu a {
+        font-size: 0.85em;
+        padding: 8px 12px;
+    }
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    .carrossel {
+        height: 250px;
+    }
+    .dublador-card img {
+        width: 120px;
+        height: 120px;
+    }
+    .dublador-card h3 {
+        font-size: 1.5em;
+    }
+    .dublador-card p, .dublador-card ul li {
+        font-size: 0.85em;
+    }
+    .rodape {
+        padding: 15px 0;
+        font-size: 0.8em;
+    }
+}
